@@ -1,0 +1,41 @@
+.container {
+    border: 1px solid red;
+
+    max-width: 1440px;
+    margin: 0 auto;
+
+    padding: 36px 16px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-item-1 {
+    max-width: 576px;
+    border: 1px solid green;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-item-2 {
+    border: 1px solid green;
+}
+
+.spiderman {
+    width: 150%;
+    transform: translate3d(-220px, 0, 0);
+}
+
+.btn {
+    display: inline-block;
+
+    border: 1px solid pink;
+
+    padding: 12px 32px;
+    border-radius: 3px;
+}
