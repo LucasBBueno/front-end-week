@@ -25,6 +25,10 @@ header {
     li {
         margin-left: 24px;
     }
+
+    @include responsive() {
+        display: none;
+    }
 }
 
 .logo {
