@@ -4,7 +4,7 @@
 
     padding: 36px 16px;
 
-    //overflow: hidden;
+    overflow: none;
 
     height: 85vh;
 
@@ -14,6 +14,8 @@
 
     @include responsive() {
         flex-direction: column;
+        height: auto;
+        overflow: hidden;
     }
 }
 
@@ -40,9 +42,32 @@
 .container-item-2 {
 }
 
+.sound-icon-x {
+    width: 56px;
+    height: 56px;
+
+    display: initial;
+
+    fill: $white;
+}
+
+.sound-icon-volume {
+    width: 56px;
+    height: 56px;
+
+    display: none;
+
+    fill: $white;
+}
+
 .spiderman {
     width: 150%;
     transform: translate3d(-220px, 0, 0);
+
+    @include responsive() {
+        width: 100%;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 .btn {
@@ -145,4 +170,55 @@
             width: 102%;
         }
     }
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+
+        background: linear-gradient(101.47deg, #0A0C10 26.38%, rgba(10, 12, 16, 0.8) 50.07%, #0A0C10 73.17%);
+    }
+}
+
+.bg-loader {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+}
+
+.loader-logo-spiderman {
+    max-width: 144px;
 }
